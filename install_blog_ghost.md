@@ -1,10 +1,13 @@
 ### 更新系统版本
+```
 wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo 
 wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo 
 yum makecache  
 yum update
+```
 
 ### 安装nginx
+```
 vi /etc/yum.repo.d/nginx.repo
 
 [nginx]
@@ -17,8 +20,10 @@ yum install nginx
 systemctl enable nginx  
 systemctl start nginx  
 ps -ef |grep nginx  
+```
 
 ### 配置nginx
+```
 vim /etc/nginx/conf.d/blog.conf 
 server {  
     listen 80;
@@ -29,8 +34,10 @@ server {
         proxy_pass         http://127.0.0.1:2368;
     }
 }
+```
 
 ### 安装Node.js
+```
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash  
 source .bashrc  
 nvm ls  
@@ -65,7 +72,10 @@ NODE_ENV=production pm2 start index.js --name "ghost"
 pm2 startup centos  
 pm2 save
 systemctl reload nginx  
+```
 
 ### 测试
+```
 首页 http://blog.ghost.com/ghost 
 Ghost后台 http://blog.ghost.com/ghost
+```
