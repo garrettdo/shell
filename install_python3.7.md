@@ -2,7 +2,7 @@
 wget --no-check-certificate https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
 tar -zxvf Python-3.7.0.tgz
 
-### 需要对python3.5进行重新编译安装。
+### 需要对python3.7进行重新编译安装。
 ```
 yum install -y zlib-devel openssl-devel libffi-devel zip unzip make gcc*
 wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-18.el7.x86_64.rpm
