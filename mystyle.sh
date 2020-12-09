@@ -1,3 +1,5 @@
+#!/bin/sh
+
 mkdir /tmp/my
 cp ~/.bashrc /tmp/my/
 
